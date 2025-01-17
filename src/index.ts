@@ -7,14 +7,11 @@ import chatRoutes from "./routes/chat-routes";
 const app = express();
 const port = 3000;
 
-// Middleware
 app.use(express.json());
 
-// Use auth routes
 app.use("/auth", authRoutes);
-
 app.use("/chat", chatRoutes);
 
 app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+  console.log(`Server running at ${port}`);
 });

@@ -4,6 +4,16 @@
 - Login API (Token Generation) - Completed
 - Authenticated Chat Import via Excel Sheet - Completed
 
+## Major Technologies Used:
+
+- MySQL: Database
+- Node.js with Express: Backend framework
+- MikroORM: ORM for database operations
+- TypeScript: For type-safe development
+- Multer and xlsx : File upload handling and processing
+- class-validator: Input validation
+- JWT: Authentication
+
 ## Setting up
 
 - After clonning the application run
@@ -34,7 +44,7 @@ npx mikro-orm migration:up
 npx ts-node src/index.ts
 ```
 
-- Application will be running in port 3000
+- Application will be running on port 3000
 - Import `postman-sample-request.json` into your Postman application (Avaialble in this repo).You will be able to see sample requests for login, signup and upload.
 
 > [!NOTE]
