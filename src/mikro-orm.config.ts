@@ -5,11 +5,11 @@ import { Migrator } from "@mikro-orm/migrations";
 import { ChatHistory } from "./entities/chat-history.entity";
 
 const config: Options = {
-  dbName: "my_local_db",
-  user: "new_user",
-  password: "1234",
-  host: "localhost",
-  port: 3306,
+  dbName: process.env.DB_NAME,
+  host: process.env.DB_HOST,
+  password: process.env.DB_PASSWORD,
+  user: process.env.DB_USERNAME,
+  port: parseInt(process.env.DB_PORT || "3306", 10),
   entities: [User, ChatHistory],
   debug: true,
   driver: MySqlDriver,

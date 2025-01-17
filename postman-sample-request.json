@@ -1,0 +1,77 @@
+{
+  "info": {
+    "_postman_id": "5e5619ba-24fc-43ff-ab1b-de96596f5e1c",
+    "name": "novastrid-rajeshwaran",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "23441700"
+  },
+  "item": [
+    {
+      "name": "signup",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"tester\",\n    \"password\": \"test123\",\n    \"email\": \"tester1@gmail.com\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:3000/auth/signup"
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"tester@gmail.com\",\n    \"password\": \"test123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "localhost:3000/auth/login"
+      },
+      "response": []
+    },
+    {
+      "name": "upload",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJ0ZXN0ZXJAZ21haWwuY29tIiwiaWF0IjoxNzM3MTIyMzc4LCJleHAiOjE3MzcxMjk1Nzh9.wzkBYIeDLM-w6us_f11u58mDvARX9URPP5Kk8FE17XY"
+          }
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "postman-cloud:///1efd4ddc-29ff-4ae0-82af-0f6a0203431f"
+            }
+          ]
+        },
+        "url": "localhost:3000/chat/bulk-upload"
+      },
+      "response": []
+    }
+  ]
+}

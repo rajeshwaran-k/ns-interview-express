@@ -5,7 +5,6 @@ let orm: MikroORM | null = null;
 
 export const getORM = async (): Promise<MikroORM> => {
   if (!orm) {
-    // Initialize MikroORM once
     orm = await MikroORM.init(config);
   }
   return orm;
@@ -13,5 +12,5 @@ export const getORM = async (): Promise<MikroORM> => {
 
 export const getEntityManager = async () => {
   const orm = await getORM();
-  return orm.em.fork(); // Fork a new EntityManager instance
+  return orm.em.fork();
 };
